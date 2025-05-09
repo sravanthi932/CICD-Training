@@ -1,0 +1,8 @@
+<suite name="Suite"> parallel="classes"
+    <test thread-count="1" name="Test" parallel="classes">
+        <classes>
+            <class name="LaunchGoogle"/>
+            <class name="GithubLogin"/>
+        </classes>
+    </test>
+</suite>
