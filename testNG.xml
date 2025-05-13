@@ -1,0 +1,14 @@
+<suite name="Sample Test Suite">
+    <test name="Smoke_Tests">
+        <classes>
+            <class name="SmokeTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression_Tests">
+        <classes>
+            <class name="RegressionTest"/>
+        </classes>
+    </test>
+
+</suite>
