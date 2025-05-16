@@ -9,32 +9,16 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 public class SmokeTest {
-    WebDriver driver;
+    WebDriver driver null;
     @BeforeTest
     public void setUpTest() {
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        Map<String, String> env = System.getenv();
-        String chromeBin = env.get("CHROME_BIN");
-        options.setBinary(chromeBin);
-        driver = new ChromeDriver(options);
-    }
-
-
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+           }
     @Test(groups = "regression")
     public void googleSearch(){
         driver.get("https://www.google.com/");
         System.out.println(driver.getTitle());
         driver.findElement(By.name("q")).sendKeys("lord shiva");
     }
-//    public class Main{
-//        public static void main(String args[]){
-//            ChromeOptions options = new ChromeOptions();
-//            Map<String, String> env = System.getenv();
-//            String chromeBin = env.get("CHROME_BIN");
-//            options.setBinary(chromeBin);
-//            ChromeDriver driver = new ChromeDriver(options);
-//        }
-//    }
 }
