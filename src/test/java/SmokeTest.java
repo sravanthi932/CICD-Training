@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.Map;
 
 public class SmokeTest {
-    WebDriver driver null;
+    WebDriver driver = null;
     @BeforeTest
     public void setUpTest() {
         WebDriverManager.chromedriver().setup();
